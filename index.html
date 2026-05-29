@@ -31,10 +31,41 @@
             }
             return humanchoice;
         }
-        let computerChoice = getComputerChoice();
-        console.log(computerChoice);
-        let humanChoice = getHumanChoice();
-        console.log(humanChoice);
+        function playRound(humanChoice, computerChoice) {
+            humanChoice = getHumanChoice();
+            computerChoice = getComputerChoice();
+            if(humanChoice==="rock" && computerChoice==="scissors" || humanChoice==="paper" && computerChoice==="rock" || humanChoice==="scissors" && computerChoice==="paper") {
+                console.log ("your did win")
+                return true
+            }
+            else if (humanChoice === computerChoice) {
+                console.log("draw")
+                result = "draw"
+                return result
+            }
+            else {
+                console.log("your lose")
+                return false
+            }
+        function getRoundResults(humanScore, computerScore) {
+            let result = playRound();
+            if(result=true) {
+                humanScore += 1;
+            }
+            else if (result = false) {
+                computerScore += 1
+            }
+        }
+        }
+        function playGame() {
+        let humanScore = 0;
+        let computerScore = 0;
+            
+            
+        }
+
+
+
     </script>
 </body>
 </html>
