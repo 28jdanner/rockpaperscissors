@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log('im hacking into the mainframe');
+        function getComputerChoice() {
+            let choice = null
+            selection = Math.random();
+            if(selection<0.33) {
+                choice = "rock";
+            }
+            else if (selection<0.66) {
+                choice = "paper";
+            }
+            else {
+                choice = "scissors";
+            }
+            return choice;
+        }
+        function getHumanChoice() {
+            let choice = null
+            choice = prompt("choose something gangalangamadingdong");
+            let humanchoice = choice.toLowerCase();
+            if(humanChoice != "rock" && humanChoice != "paper" && humanChoice != "scissors") {
+                console.log("invalid choice numbskull")
+            }
+            return humanchoice;
+        }
+        let computerChoice = getComputerChoice();
+        console.log(computerChoice);
+        let humanChoice = getHumanChoice();
+        console.log(humanChoice);
+    </script>
+</body>
+</html>
